@@ -21,14 +21,15 @@ class FooController extends RestController
      */
     public function bar()
     {
-        $bar = [
-            'falanu' => [
-                'dhikanu',
-                'tamburo'
-            ]
-        ];
 
-       $this->set(compact('bar'));
+        $this->request->allowMethod('get');
+
+        $this->loadModel('Products');
+
+        $product = $this->Products->find('all');
+
+
+       $this->set(compact('product'));
 
 
     }
