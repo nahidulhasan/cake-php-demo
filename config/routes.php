@@ -79,6 +79,8 @@ Router::scope('/', function (RouteBuilder $routes) {
      */
     //$routes->connect('/', ['controller' => 'Pages', 'action' => 'display', 'home']);
 
+  //  $routes->connect('/', ['controller' => 'customers', 'action' => 'login', 'home']);
+
     $routes->connect('/', ['controller' => 'users', 'action' => 'index', 'home']);
 
     $routes->connect('/', ['controller' => 'products', 'action' => 'index', 'home']);
